@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omegle Cricket Game</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+    <div class="flex space-x-4">
+        <!-- Video Section -->
+        <div class="w-1/2">
+            <video id="localVideo" autoplay playsinline class="h-64 mb-2 border rounded"></video>
+            <video id="remoteVideo" autoplay playsinline class="h-64 border rounded"></video>
+        </div>
+        <!-- Game Area -->
+        <div id="game-area" class="w-1/2 bg-white p-4 rounded shadow">
+            <h2 class="text-xl font-bold mb-4">Number Cricket Game</h2>
+            <p id="game-message" class="mb-4 text-gray-700"></p>
+            <div id="scores" class="mb-4">
+                <p>You: <span id="score-you">0</span></p>
+                <p>Opponent: <span id="score-opponent">0</span></p>
+            </div>
+            <div id="toss-section" class="mb-4">
+                <button id="heads" class="bg-blue-500 text-white px-4 py-2 rounded-full mr-2 hover:bg-blue-600">Heads</button>
+                <button id="tails" class="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600">Tails</button>
+            </div>
+            <div id="role-section" class="mb-4 hidden">
+                <button id="bat" class="bg-green-500 text-white px-4 py-2 rounded-full mr-2 hover:bg-green-600">Bat</button>
+                <button id="bowl" class="bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600">Bowl</button>
+            </div>
+            <div id="number-section" class="mb-4 hidden">
+                <div class="flex space-x-2">
+                    <button class="number-btn bg-purple-500 text-white w-10 h-10 rounded-full hover:bg-purple-600">1</button>
+                    <button class="number-btn bg-purple-500 text-white w-10 h-10 rounded-full hover:bg-purple-600">2</button>
+                    <button class="number-btn bg-purple-500 text-white w-10 h-10 rounded-full hover:bg-purple-600">3</button>
+                    <button class="number-btn bg-purple-500 text-white w-10 h-10 rounded-full hover:bg-purple-600">4</button>
+                    <button class="number-btn bg-purple-500 text-white w-10 h-10 rounded-full hover:bg-purple-600">5</button>
+                </div>
+            </div>
+            <button id="change-partner" class="bg-gray-500 text-white px-4 py-2 rounded-full mb-2 hidden hover:bg-gray-600">Change Partner</button>
+            <button id="play-again" class="bg-red-500 text-white px-4 py-2 rounded-full hidden hover:bg-red-600">Play Again</button>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
