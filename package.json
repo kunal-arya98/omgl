@@ -1,12 +1,18 @@
 {
     "name": "omegle-cricket-game",
     "version": "1.0.0",
+    "description": "Multiplayer Cricket Game with Video Chat",
     "main": "server.js",
+    "type": "module",
     "scripts": {
-        "start": "node server.js"
+      "start": "node server.js"
     },
     "dependencies": {
-        "express": "^4.19.2",
-        "ws": "^8.18.1"
+      "express": "^4.17.1",
+      "ws": "^8.2.3"
+    },
+    "devDependencies": {
+        "@types/express": "^5.0.0",
+        "@types/ws": "^8.18.0"
     }
 }
