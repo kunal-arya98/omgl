@@ -1,9 +1,9 @@
-const WebSocket = require('ws');
-const http = require('http');
-const express = require('express');
+import { WebSocketServer } from 'ws';
+import { createServer } from 'http';
+import express from 'express';
 const app = express();
-const server = http.createServer(app);
-const wss = new WebSocket.Server({ server });
+const server = createServer(app);
+const wss = new WebSocketServer({ server });
 
 // Serve static files from the 'public' directory
 app.use(express.static('public'));
